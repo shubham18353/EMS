@@ -15,9 +15,9 @@ namespace EMS.Controllers
         {
             try
             {
-                DepartmentDbContext db = new DepartmentDbContext();
-                List<Department> obj = db.GetDepartment();
-                return View(obj);
+            DepartmentDbContext db = new DepartmentDbContext();
+            List<Department> obj = db.GetDepartment();
+            return View(obj);
             }
             catch(Exception ex)
             {
@@ -129,11 +129,11 @@ namespace EMS.Controllers
         {
             try
             {
-                EmployeeDbContext ctx = new EmployeeDbContext();
+            EmployeeDbContext ctx = new EmployeeDbContext();
                 List<Employee> row = ctx.GetEmployeeByDep(dep.Name);
                 
-                return View(row);
-            }
+            return View(row);
+        }
             catch(Exception ex)
             {
                 
